@@ -12,18 +12,11 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Calendar;
 
-/**
- * A simple {@link Fragment} subclass for the date picker.
- */
+
 public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
 
-    /**
-     * Creates the date picker dialog with the current date from Calendar.
-     *
-     * @param savedInstanceState    Saved instance state bundle
-     * @return DatePickerDialog     The date picker dialog
-     */
+
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -37,14 +30,7 @@ public class DatePickerFragment extends DialogFragment
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
 
-    /**
-     * Grabs the date and passes it to processDatePickerResult().
-     *
-     * @param datePicker  The date picker view
-     * @param year  The year chosen
-     * @param month The month chosen
-     * @param day   The day chosen
-     */
+
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
         // Set the activity to the Main Activity.
